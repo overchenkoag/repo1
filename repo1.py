@@ -84,7 +84,4 @@ if mm0 == "11":
 if mm0 == "12":
     mm = "декабря"
 
-
-print(dd,mm,yyyy0,"года")
-# print(dd,mm,yyyy)
-# print(dd,mm,yyyy)
+print(dd, mm, yyyy0, "года")
