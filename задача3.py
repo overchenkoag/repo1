@@ -6,4 +6,10 @@ my_list_1 = [2, 2, 5, 12, 8, 2, 12]
 В этом случае ответ будет:
 [5, 8]"""
 
-print("AA")
+my_list_1 = [2, 2, 5, 12, 8, 2, 12, 12, 12, 8, 7]
+my_list_2 = []
+for i in my_list_1:
+    if i not in my_list_2:
+        my_list_2.append(i)
+
+print(my_list_2)

@@ -12,6 +12,7 @@ my_favourite_group = {
 Получить объект — словарь из предыдущего задания."""
 import json
 
+"""
 data={
     "country":{
         "Russia":{
@@ -27,13 +28,18 @@ data={
     }
 }
 a=["a","b","c"]
+"""
+#deserial=dict()
 
 #with open("data_file.json", "w") as write_file:
 #    json.dump(data, write_file)
-serial=json.dumps(data)
+#serial=json.dumps(data)
 #print(type(serial))
-deserial=json.loads(serial)
-print(type(deserial["country"]))
-print(type(deserial["country"]["Russia"]["domains"]))
-json.
+with open("data_file.json", "r") as write_file:
+    deserial=json.load(write_file)
+
+print(deserial)
+#print(type(deserial["country"]))
+#print(type(deserial["country"]["Russia"]["domains"]))
+
 
