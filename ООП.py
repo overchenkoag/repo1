@@ -1,22 +1,13 @@
-class A:
-    name="C200"
+def decor_fn(func):
+    def other_fn(*args,**kwargs):
+        result=func(*args,**kwargs)
+        print("Работает декоратор. Оригинальная функция вернула: ",result)
+        return result+" + decor"
+    return other_fn
 
-    def start(self):
-        print("start")
-    def change(self):
-        A.name="SSS"
+@decor_fn
+def simple_fn(a):
+    print("Вызов оригинальной функции") # указывает на вызов оригинальной функции
+    return a
 
-
-
-b=A()
-c=A()
-b.arrrr=1
-
-b.name="DDD"
-print(b.name)
-print(c.name)
-b.change()
-A.name="RRR"
-d=A()
-print(b.name)
-print(d.name)
+print(simple_fn("TEST"))
